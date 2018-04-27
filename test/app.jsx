@@ -5,7 +5,7 @@ class Button extends React.Component{
     }
     render() {
         return(
-            <button onClick={this.click}>Click Me</button>
+            <button onclick={this.click}>Click Me</button>
         )
     }
 }
@@ -15,7 +15,9 @@ class Ex extends React.Component {
         super(props)
         this.name = "Nnamdi"
     }
-
+    componentDidMount() {
+        console.log('I mounted')
+    }
     render() {
         return ( <div> Hello !!, I'm { this.name } <Button /></div>
         )

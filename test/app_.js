@@ -6,7 +6,7 @@ class Button extends React.Component {
     render() {
         return React.createElement(
             'button',
-            { onClick: this.click },
+            { onclick: this.click },
             'Click Me'
         );
     }
@@ -17,7 +17,9 @@ class Ex extends React.Component {
         super(props);
         this.name = "Nnamdi";
     }
-
+    componentDidMount() {
+        console.log('I mounted');
+    }
     render() {
         return React.createElement(
             'div',
