@@ -1,12 +1,16 @@
 {
-  "name": "aethon-dom",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
-  "license": "ISC"
+    "name": "aethon-dom",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "./scripts/build.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "rollup": "^0.58.2"
+    }
 }
