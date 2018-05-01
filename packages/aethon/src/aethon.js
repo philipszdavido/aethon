@@ -146,6 +146,6 @@ ReactDOM = {
     }
 }
 
-/*exports.React = React
+exports.React = React
 exports.Component = Component
-exports.ReactDOM = ReactDOM*/
+exports.ReactDOM = ReactDOM

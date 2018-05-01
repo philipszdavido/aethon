@@ -1,0 +1,17 @@
+{
+  "name": "aethon-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
