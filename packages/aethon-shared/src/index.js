@@ -10,5 +10,5 @@ const Element = {
     children: null
 }
 
-export VNodeTypes
-export Element
+exports.VNodeTypes = VNodeTypes
+exports.Element = Element
