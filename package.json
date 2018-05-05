@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "build": "babel --plugins transform-react-jsx test/app.jsx > test/app_.js",
+        "create": "node ./scripts/create",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
