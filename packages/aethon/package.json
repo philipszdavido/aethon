@@ -1,6 +1,6 @@
 {
     "name": "aethon",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A modern JavaScript library for building rich UI",
     "main": "dist/aethon.min.js",
     "scripts": {
@@ -10,7 +10,7 @@
     "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
     "license": "ISC",
     "dependencies": {
-        "aethon-shared": "^1.0.0",
+        "aethon-shared": "^0.0.2",
         "rollup": "^0.58.2"
     },
     "devDependencies": {
