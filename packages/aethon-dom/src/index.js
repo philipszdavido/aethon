@@ -1,20 +1,5 @@
 import { VNodeTypes, Element } from 'aethon-shared'
 
-class Component {
-    constructor(props, context) {
-        this.props = props
-        this.context = context
-    }
-    setState(_state) {}
-    componentWillUpdate(nextProps, nextState) {}
-    componentWillUnmount() {}
-    componentWillReceiveProps(nextProps) {}
-    componentWillMount() {}
-    componentDidMount() {}
-    render() {}
-}
-
-
 function mount(element, parentDom) {
     if (element.type == VNodeTypes.COMPONENT) {
         return mountComponent(element.tag, parentDom)
@@ -64,13 +49,13 @@ function appendProps(props, element) {
         element.setAttribute(key, props[key])
     }
 }
-Aethon = {
+/*Aethon = {
     Component,
     //createElement
-}
+}*/
 
 
-AethonDOM = {
+export const AethonDOM = {
     render: (_yag, root) => {
         const element = _yag
         const parentDom = root
@@ -81,6 +66,5 @@ AethonDOM = {
     }
 }
 
-exports.Aethon = Aethon
-exports.Component = Component
-exports.AethonDOM = AethonDOM
+//exports.Aethon = Aethon
+//exports.Component = Component

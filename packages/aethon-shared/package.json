@@ -1,12 +1,12 @@
 {
-  "name": "aethon-shared",
-  "version": "0.0.2",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
-  "license": "ISC"
+    "name": "aethon-shared",
+    "version": "0.0.2",
+    "description": "",
+    "main": "dist/aethon-shared.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
+    "license": "ISC"
 }

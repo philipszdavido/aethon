@@ -2,7 +2,7 @@
     "name": "aethon",
     "version": "0.0.2",
     "description": "A modern JavaScript library for building rich UI",
-    "main": "dist/aethon.min.js",
+    "main": "dist/aethon.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

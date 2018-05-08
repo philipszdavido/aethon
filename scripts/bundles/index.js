@@ -3,7 +3,8 @@ const bundles = [
     {
         /********* AETHON */
         input: {
-            input: "packages/aethon/index.js"
+            input: "packages/aethon/index.js",
+            external: ['aethon-shared']
         },
         output: {
             file: 'packages/aethon/dist/aethon.js',
@@ -15,7 +16,8 @@ const bundles = [
     {
         /********** AETHON-DOM */
         input: {
-            input: "packages/aethon-dom/index.js"
+            input: "packages/aethon-dom/index.js",
+            external: ['aethon-shared']
         },
         output: {
             file: 'packages/aethon-dom/dist/aethon-dom.js',

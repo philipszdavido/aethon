@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('aethon-shared')) :
-    typeof define === 'function' && define.amd ? define(['aethon-shared'], factory) :
-    (factory(null));
-}(this, (function (aethonShared) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('aethon-shared')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'aethon-shared'], factory) :
+    (factory((global.Aethon = {}),null));
+}(this, (function (exports,aethonShared) { 'use strict';
 
     /*const VNodeTypes = {
         COMPONENT: "COMPONENT",
@@ -15,8 +15,21 @@
         props: "",
         children: null
     }*/
+    class Component$1 {
+        constructor(props, context) {
+            this.props = props;
+            this.context = context;
+        }
+        setState(_state) {}
+        componentWillUpdate(nextProps, nextState) {}
+        componentWillUnmount() {}
+        componentWillReceiveProps(nextProps) {}
+        componentWillMount() {}
+        componentDidMount() {}
+        render() {}
+    }
 
-    function createElement(el, props, ...children) {
+    function createElement$1(el, props, ...children) {
         //console.log('called')
 
         /*console.log(el, props, children)
@@ -42,7 +55,7 @@
         if (typeof el == 'string') {
             type = aethonShared.VNodeTypes.ELEMENT;
         }
-        const dom = createVNode(el, type, props, children);
+        const dom = createVNode$1(el, type, props, children);
         return dom
     }
 
@@ -54,7 +67,7 @@
      *  children
      * }
      */
-    function createVNode(tag, type, props, children) {
+    function createVNode$1(tag, type, props, children) {
         return {
             tag,
             type,
@@ -62,8 +75,23 @@
             children
         }
     }
-    exports.createElement = createElement;
+
+    //exports.createElement = createElement
 
     //const { React, Component, ReactDOM } = require('./aethon.js')
+
+    const Aethon = {
+        createElement,
+        createVNode,
+        Component
+    };
+
+    module.exports = Aethon;
+
+    exports.createElement = createElement$1;
+    exports.createVNode = createVNode$1;
+    exports.Component = Component$1;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
