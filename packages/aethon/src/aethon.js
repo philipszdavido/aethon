@@ -11,7 +11,8 @@ const Element = {
 }*/
 import { VNodeTypes, Element } from 'aethon-shared'
 let cmps = []
-export class Component {
+
+class Component {
     constructor(props, context) {
         this.props = props
         this.context = context
@@ -25,7 +26,7 @@ export class Component {
     render() {}
 }
 
-export function createElement(el, props, ...children) {
+function createElement(el, props, ...children) {
     //console.log('called')
 
     /*console.log(el, props, children)
@@ -64,7 +65,7 @@ export function createElement(el, props, ...children) {
  *  children
  * }
  */
-export function createVNode(tag, type, props, children) {
+function createVNode(tag, type, props, children) {
     return {
         tag,
         type,
@@ -72,5 +73,10 @@ export function createVNode(tag, type, props, children) {
         children
     }
 }
-
+const Aethon = {
+    createVNode,
+    createElement,
+    Component
+}
+export default Aethon
 //exports.createElement = createElement

@@ -3,7 +3,7 @@
 //const React = require('./src/aethon.js')
 //module.exports = React.default ? React.default : React
 
-export { createElement, createVNode, Component }
+/*export { createElement, createVNode, Component }
 from './src/aethon'
 
 const Aethon = {
@@ -13,3 +13,6 @@ const Aethon = {
 }
 
 module.exports = Aethon
+*/
+const Aethon = require('./src')
+module.exports = Aethon.default ? Aethon.default : Aethon

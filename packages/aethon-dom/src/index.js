@@ -55,7 +55,7 @@ function appendProps(props, element) {
 }*/
 
 
-export const AethonDOM = {
+const AethonDOM = {
     render: (_yag, root) => {
         const element = _yag
         const parentDom = root
@@ -65,6 +65,6 @@ export const AethonDOM = {
         return dom
     }
 }
-
+export default AethonDOM
 //exports.Aethon = Aethon
 //exports.Component = Component
