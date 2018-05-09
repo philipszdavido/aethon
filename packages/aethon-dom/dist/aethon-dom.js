@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('aethon-shared')) :
-    typeof define === 'function' && define.amd ? define(['exports', 'aethon-shared'], factory) :
-    (factory((global.AethonDOM = {}),null));
-}(this, (function (exports,aethonShared) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('aethon-shared')) :
+    typeof define === 'function' && define.amd ? define(['aethon-shared'], factory) :
+    (global.AethonDOM = factory(null));
+}(this, (function (aethonShared) { 'use strict';
 
     function mount(element, parentDom) {
         if (element.type == aethonShared.VNodeTypes.COMPONENT) {
@@ -59,7 +59,7 @@
     }*/
 
 
-    const AethonDOM$1 = {
+    const AethonDOM = {
         render: (_yag, root) => {
             const element = _yag;
             const parentDom = root;
@@ -69,14 +69,9 @@
             return dom
         }
     };
-
     //exports.Aethon = Aethon
     //exports.Component = Component
 
-    module.exports = AethonDOM;
-
-    exports.AethonDOM = AethonDOM$1;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
+    return AethonDOM;
 
 })));

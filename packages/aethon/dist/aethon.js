@@ -15,7 +15,8 @@
         props: "",
         children: null
     }*/
-    class Component$1 {
+
+    class Component {
         constructor(props, context) {
             this.props = props;
             this.context = context;
@@ -29,7 +30,7 @@
         render() {}
     }
 
-    function createElement$1(el, props, ...children) {
+    function createElement(el, props, ...children) {
         //console.log('called')
 
         /*console.log(el, props, children)
@@ -55,7 +56,7 @@
         if (typeof el == 'string') {
             type = aethonShared.VNodeTypes.ELEMENT;
         }
-        const dom = createVNode$1(el, type, props, children);
+        const dom = createVNode(el, type, props, children);
         return dom
     }
 
@@ -67,7 +68,7 @@
      *  children
      * }
      */
-    function createVNode$1(tag, type, props, children) {
+    function createVNode(tag, type, props, children) {
         return {
             tag,
             type,
@@ -75,22 +76,33 @@
             children
         }
     }
-
-    //exports.createElement = createElement
+    /*const Aethon = {
+        createVNode,
+        createElement,
+        Component
+    }
+    export default Aethon*/
+    const Aethon = {
+        createElement,
+        Component
+    };
+    module.exports = Aethon;
 
     //const { React, Component, ReactDOM } = require('./aethon.js')
 
-    const Aethon = {
+    /*const Aethon = {
         createElement,
-        createVNode,
         Component
-    };
+    }*/
 
-    module.exports = Aethon;
+    //module.exports = Aethon
 
-    exports.createElement = createElement$1;
-    exports.createVNode = createVNode$1;
-    exports.Component = Component$1;
+    //const Aethon = require('./src')
+    //module.exports = Aethon.default ? Aethon.default :
+
+    exports.Component = Component;
+    exports.createElement = createElement;
+    exports.createVNode = createVNode;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

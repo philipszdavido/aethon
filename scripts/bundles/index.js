@@ -16,7 +16,7 @@ const bundles = [
     {
         /********** AETHON-DOM */
         input: {
-            input: "packages/aethon-dom/index.js",
+            input: "packages/aethon-dom/src/index.js",
             external: ['aethon-shared']
         },
         output: {
