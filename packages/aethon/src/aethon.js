@@ -1,15 +1,5 @@
-/*const VNodeTypes = {
-    COMPONENT: "COMPONENT",
-    ELEMENT: "ELEMENT",
-    TEXT: "TEXT"
-}
-const Element = {
-    tag: "",
-    type: "",
-    props: "",
-    children: null
-}*/
 import { VNodeTypes, Element } from 'aethon-shared'
+
 let cmps = []
 
 export class Component {
@@ -27,24 +17,6 @@ export class Component {
 }
 
 export function createElement(el, props, ...children) {
-    //console.log('called')
-
-    /*console.log(el, props, children)
-    console.log('React.render')
-    if (typeof el == 'function') {
-        const e = new el(props)
-        e.children = children
-        e.type = 'CLASS'
-        return e
-    } else {
-        const _dom = document.createElement(el)
-        children.forEach(function(element) {
-            _dom.innerHTML += element
-        });
-        return _dom
-    }*/
-    //console.log(el, '===props:', props)
-    //console.log(el, '===children:', children)
     let type
     if (typeof el == 'object' || typeof el == 'function') {
         type = VNodeTypes.COMPONENT
@@ -73,12 +45,6 @@ export function createVNode(tag, type, props, children) {
         children
     }
 }
-/*const Aethon = {
-    createVNode,
-    createElement,
-    Component
-}
-export default Aethon*/
 const Aethon = {
     createElement,
     Component

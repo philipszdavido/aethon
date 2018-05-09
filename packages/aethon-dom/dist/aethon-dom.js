@@ -17,7 +17,6 @@
     }
 
     function mountComponent(Component, parentDom) {
-        //console.log(Comp)
         const component = new Component();
         component.componentWillMount();
         const dom = mount(component.render(), parentDom);
@@ -27,7 +26,6 @@
 
     function mountElement(element, parentDom) {
         const { type, props, tag, children } = element;
-        //console.log(props)
         const dom = document.createElement(tag);
         parentDom.appendChild(dom);
         appendProps(props, dom);
@@ -53,11 +51,6 @@
             element.setAttribute(key, props[key]);
         }
     }
-    /*Aethon = {
-        Component,
-        //createElement
-    }*/
-
 
     const AethonDOM = {
         render: (_yag, root) => {
@@ -69,8 +62,6 @@
             return dom
         }
     };
-    //exports.Aethon = Aethon
-    //exports.Component = Component
 
     return AethonDOM;
 
